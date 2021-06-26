@@ -18,6 +18,7 @@ import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
+import logo from '../src/logo.png';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -34,11 +35,11 @@ function App() {
         <header className="row">
           <div>
             <Link className="brand" to="/">
-               printzy
+               <img src={logo} alt='logo' height="45" width="145"/>
             </Link>
           </div>
           <div>
-            <Link to="/cart">
+            <Link className="cart" to="/cart">
               Cart
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
@@ -46,7 +47,7 @@ function App() {
             </Link>
             {userInfo ? (
               <div className="dropdown">
-                <Link to="#">
+                <Link className="user" to="#">
                   {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
                 </Link>
                 <ul className="dropdown-content">
@@ -68,7 +69,7 @@ function App() {
             )}
              {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
-                <Link to="#admin">
+                <Link className="admin" to="#admin">
                   Admin <i className="fa fa-caret-down"></i>
                 </Link>
                 <ul className="dropdown-content">
