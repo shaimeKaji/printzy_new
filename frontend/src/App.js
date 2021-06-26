@@ -18,6 +18,7 @@ import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
+import UserListScreen from './screens/UserListScreen';
 import logo from '../src/logo.png';
 
 function App() {
@@ -66,7 +67,7 @@ function App() {
                 </ul>
               </div>
             ) : (
-              <Link to="/signin">Sign In</Link>
+              <Link className="signin" to="/signin">Sign In</Link>
             )}
              {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
@@ -118,6 +119,7 @@ function App() {
             path="/orderlist"
             component={OrderListScreen}
           ></AdminRoute>
+          <AdminRoute path="/userlist" component={UserListScreen}></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
