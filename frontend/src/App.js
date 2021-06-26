@@ -35,7 +35,8 @@ function App() {
         <header className="row">
           <div>
             <Link className="brand" to="/">
-               <img src={logo} alt='logo' height="45" width="145"/>
+              <span className="web-name"><img src={logo} alt='logo' className="logo"/></span>
+               
             </Link>
           </div>
           <div>
