@@ -73,7 +73,7 @@ function App() {
             )}
              {userInfo && userInfo.isSeller && (
               <div className="dropdown">
-                <Link to="#admin">
+                <Link to="#admin" className="seller">
                   Seller <i className="fa fa-caret-down"></i>
                 </Link>
                 <ul className="dropdown-content">
