@@ -82,8 +82,12 @@ export default function ProductEditScreen(props) {
     } catch (error) {
       setErrorUpload(error.message);
       setLoadingUpload(false);
+    
     }
+    
+    
   };
+  
 
   return (
     <div>
@@ -144,13 +148,17 @@ export default function ProductEditScreen(props) {
             </div>
             <div>
               <label htmlFor="category">Category</label>
-              <input
-                id="category"
-                type="text"
-                placeholder="Enter category"
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              ></input>
+              <select value={category} onChange={(e) => setCategory(e.target.value)}>
+            <option value="T-shirts">T-shirts</option>
+            <option value="Punjabi">Punjabi</option>
+            <option value="3D printed items">3D printed items</option>
+            <option value="Covers">Covers</option>
+            <option value="Homemade Jewelry">Homemade Jewelry</option>
+            <option value="Speakers">Speakers</option>
+            <option value="Sipper">Sipper</option>
+            <option value="Clocks">Clocks</option>
+            <option value="Pillows">Pillows</option>
+          </select>
             </div>
             <div>
               <label htmlFor="brand">Brand</label>
